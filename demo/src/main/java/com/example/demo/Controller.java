@@ -4,6 +4,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 @RestController
@@ -19,13 +20,13 @@ public class Controller {
 
     @GetMapping
     public ResponseEntity<Map<String, String>>getDetails(){
-        Map<String, String> response = new HashMap<>();
+        Map<String, String> response = new LinkedHashMap<>();
         model.setEmail("joelekwegh3@gmail.com");
         model.setUrl("https://github.com/joelned/HNG-task");
         String time = timeService.getCurrentTime();
         response.put("email", model.getEmail());
-        response.put("time", time);
-        response.put("url", model.getUrl());
+        response.put("current_datetime", time);
+        response.put("github_url", model.getUrl());
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 }
