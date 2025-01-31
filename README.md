@@ -20,6 +20,7 @@ When you access the `/info` endpoint, you will receive a JSON response that look
   "current_time": "2025-01-31T12:34:56.789Z",
   "github_url": "https://github.com/yourusername"
 }
+```
 # Spring Boot REST API - Timestamp, Email, and URL Endpoint
 
 This task demonstrates a simple Spring Boot REST API that returns an email, the current date-time in ISO 8601 format, and a URL in a JSON response. The application is built using Java 17 and Spring Boot.
@@ -43,3 +44,17 @@ Follow the steps below to set up the project on your local machine:
 
 ```bash
 git clone https://github.com/joelned/HNG-task.git
+```
+### 2. Navigate to project folder
+```bash
+cd HNG-task
+```
+
+### 3. Build the project using Maven
+```bash
+mvn clean install
+```
+### 4. Run the application
+```bash
+mvn spring-boot:run
+```
