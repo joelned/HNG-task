@@ -17,7 +17,7 @@ public class Controller {
         this.timeService = timeService;
     }
 
-    @GetMapping("/info")
+    @GetMapping
     public ResponseEntity<Map<String, String>>getDetails(){
         Map<String, String> response = new HashMap<>();
         model.setEmail("joelekwegh3@gmail.com");
